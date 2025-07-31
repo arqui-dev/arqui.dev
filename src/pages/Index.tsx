@@ -10,7 +10,9 @@ const Index = () => {
       <header className="border-b">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-primary">arqui.dev</div>
+            <div className="text-2xl font-bold text-primary">
+              arqui.dev the best option in: <span className="animate-pulse">Product Architecture</span>*
+            </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Serviços</a>
               <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">Sobre</a>
@@ -272,7 +274,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="text-2xl font-bold text-secondary-foreground mb-4">arqui.dev</div>
+            <div className="text-2xl font-bold text-secondary-foreground mb-4">
+              arqui.dev the best option in: <span className="animate-pulse">DevOps Platform Engineering</span>*
+            </div>
+            <p className="text-xs text-muted-foreground mb-4">* in our humble opinion</p>
               <p className="text-muted-foreground mb-6">
                 Consultoria especializada em DevOps e Arquitetura de Produtos Digitais
               </p>
