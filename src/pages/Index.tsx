@@ -30,18 +30,19 @@ const Index = () => {
               Consultoria Especializada em DevOps
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              Engenharia de Plataformas DevOps e Arquitetura Digital
+              Da Ideação ao Lançamento de Produtos Digitais e DevOps como Serviço
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Transformamos sua infraestrutura tecnológica com soluções modernas de DevOps, automação e arquitetura de produtos digitais escaláveis.
+              Especializados em produtos digitais com IA e serviços gerenciados de DevOps. 
+              Trabalhamos em duas frentes: criação completa de produtos inovadores e infraestrutura robusta para acelerar suas entregas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8">
-                Começar Projeto
+                Criar Produto Digital
                 <ArrowRight className="ml-2" />
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8">
-                Ver Cases
+                DevOps como Serviço
               </Button>
             </div>
           </div>
@@ -52,88 +53,124 @@ const Index = () => {
       <section id="services" className="py-20 bg-gradient-to-b from-accent/30 to-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Nossos Serviços</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Nossas Duas Frentes de Atuação</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Oferecemos soluções completas para modernizar sua infraestrutura e acelerar seus produtos digitais
+              Oferecemos soluções completas para criação de produtos digitais inovadores e serviços gerenciados de DevOps
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                  <Cloud className="text-primary" size={32} />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Engenharia de Plataformas</h3>
-                <p className="text-muted-foreground mb-6">
-                  Construção de plataformas robustas e escaláveis com foco em automação, observabilidade e eficiência operacional.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm">
-                    <CheckCircle className="text-primary mr-2" size={16} />
-                    Infrastructure as Code
-                  </li>
-                  <li className="flex items-center text-sm">
-                    <CheckCircle className="text-primary mr-2" size={16} />
-                    CI/CD Pipelines
-                  </li>
-                  <li className="flex items-center text-sm">
-                    <CheckCircle className="text-primary mr-2" size={16} />
-                    Kubernetes & Containers
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
+          <div className="grid lg:grid-cols-2 gap-8">
             <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300">
               <CardContent className="p-8">
                 <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                   <Code className="text-primary" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Arquitetura de Produtos</h3>
+                <h3 className="text-2xl font-semibold mb-4">Produtos Digitais com IA</h3>
                 <p className="text-muted-foreground mb-6">
-                  Design de arquiteturas modernas para produtos digitais com foco em performance, escalabilidade e experiência do usuário.
+                  Da ideação ao lançamento de produtos digitais inovadores, especialmente no mercado de Inteligência Artificial. 
+                  Acompanhamos todo o ciclo de vida do produto.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm">
-                    <CheckCircle className="text-primary mr-2" size={16} />
-                    Microserviços
-                  </li>
-                  <li className="flex items-center text-sm">
-                    <CheckCircle className="text-primary mr-2" size={16} />
-                    APIs & Integrações
-                  </li>
-                  <li className="flex items-center text-sm">
-                    <CheckCircle className="text-primary mr-2" size={16} />
-                    Cloud Native
-                  </li>
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="font-semibold mb-3 text-primary">Strategy & Discovery</h4>
+                    <ul className="space-y-2">
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Gestão de Produtos
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Design Sprint
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Discovery & Validação
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Oportunidades de Negócio
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-3 text-primary">Development & Launch</h4>
+                    <ul className="space-y-2">
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        POC & MVP
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Arquitetura Técnica
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Gestão de Projetos
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Go-to-Market
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300">
               <CardContent className="p-8">
                 <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                  <Zap className="text-primary" size={32} />
+                  <Cloud className="text-primary" size={32} />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">DevOps & Automação</h3>
+                <h3 className="text-2xl font-semibold mb-4">DevOps como Serviço</h3>
                 <p className="text-muted-foreground mb-6">
-                  Implementação de práticas DevOps para acelerar entregas, reduzir riscos e aumentar a confiabilidade dos sistemas.
+                  Serviço gerenciado completo para cuidar e criar soluções de infraestrutura em nuvem, 
+                  permitindo que você foque no seu core business.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm">
-                    <CheckCircle className="text-primary mr-2" size={16} />
-                    Monitoramento & Alertas
-                  </li>
-                  <li className="flex items-center text-sm">
-                    <CheckCircle className="text-primary mr-2" size={16} />
-                    Backup & Disaster Recovery
-                  </li>
-                  <li className="flex items-center text-sm">
-                    <CheckCircle className="text-primary mr-2" size={16} />
-                    Security & Compliance
-                  </li>
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="font-semibold mb-3 text-primary">Infraestrutura & Cloud</h4>
+                    <ul className="space-y-2">
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Infraestrutura em Nuvem
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        CI/CD Pipelines
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Kubernetes & Containers
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Infrastructure as Code
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-3 text-primary">Operations & SRE</h4>
+                    <ul className="space-y-2">
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Gestão de Lançamentos
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Práticas de SRE
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Monitoramento 24/7
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <CheckCircle className="text-primary mr-2" size={16} />
+                        Security & Compliance
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -145,10 +182,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6">Por que escolher a arqui.dev?</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6">Nossa Abordagem Completa</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Somos especialistas em transformar ideias em produtos digitais robustos e escaláveis. 
-                Nossa experiência combina as melhores práticas de DevOps com arquiteturas modernas.
+                Trabalhamos em duas frentes estratégicas: criamos produtos digitais inovadores do zero e oferecemos 
+                DevOps gerenciado para otimizar suas operações. Nossa experiência no mercado de IA nos permite entregar soluções verdadeiramente disruptivas.
               </p>
               
               <div className="space-y-6">
@@ -157,9 +194,9 @@ const Index = () => {
                     <Users className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Equipe Especializada</h3>
+                    <h3 className="font-semibold mb-2">Produtos Digitais com IA</h3>
                     <p className="text-muted-foreground">
-                      Profissionais com anos de experiência em grandes empresas de tecnologia
+                      Da ideação ao go-to-market, especializados em produtos que utilizam Inteligência Artificial
                     </p>
                   </div>
                 </div>
@@ -169,9 +206,9 @@ const Index = () => {
                     <Zap className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Metodologia Ágil</h3>
+                    <h3 className="font-semibold mb-2">DevOps Gerenciado</h3>
                     <p className="text-muted-foreground">
-                      Entregamos valor rapidamente com iterações curtas e feedback contínuo
+                      Infraestrutura robusta e práticas de SRE para garantir alta disponibilidade e performance
                     </p>
                   </div>
                 </div>
@@ -181,9 +218,9 @@ const Index = () => {
                     <CheckCircle className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Resultados Comprovados</h3>
+                    <h3 className="font-semibold mb-2">Ciclo Completo</h3>
                     <p className="text-muted-foreground">
-                      Histórico de sucesso em projetos de diferentes portes e complexidades
+                      Desde discovery e validação até arquitetura técnica e operação contínua
                     </p>
                   </div>
                 </div>
@@ -256,24 +293,24 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="font-semibold text-secondary-foreground mb-4">Serviços</h3>
+              <h3 className="font-semibold text-secondary-foreground mb-4">Produtos Digitais</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>Engenharia de Plataformas</li>
-                <li>Arquitetura de Produtos</li>
-                <li>DevOps & Automação</li>
-                <li>Cloud Migration</li>
-                <li>Consultoria Técnica</li>
+                <li>Discovery & Design Sprint</li>
+                <li>Gestão de Produtos</li>
+                <li>POC & MVP Development</li>
+                <li>Produtos com IA</li>
+                <li>Go-to-Market Strategy</li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-semibold text-secondary-foreground mb-4">Tecnologias</h3>
+              <h3 className="font-semibold text-secondary-foreground mb-4">DevOps Gerenciado</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>AWS, Azure, GCP</li>
-                <li>Kubernetes & Docker</li>
-                <li>Terraform & Ansible</li>
-                <li>GitLab CI/CD</li>
-                <li>Prometheus & Grafana</li>
+                <li>Infraestrutura em Nuvem</li>
+                <li>CI/CD & Automação</li>
+                <li>Práticas de SRE</li>
+                <li>Monitoramento 24/7</li>
+                <li>Gestão de Lançamentos</li>
               </ul>
             </div>
           </div>
