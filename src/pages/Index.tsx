@@ -10,8 +10,8 @@ const Index = () => {
       <header className="border-b">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-primary">
-              arqui.dev the best option in: <span className="animate-pulse">Product Architecture</span>*
+            <div className="text-2xl font-bold">
+              <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Serviços</a>
@@ -25,16 +25,12 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-6">
-              Consultoria Especializada em DevOps
-            </Badge>
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              Da Ideação ao Lançamento de Produtos Digitais e DevOps como Serviço
+            <h1 className="text-6xl lg:text-8xl font-bold mb-6">
+              <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
               Especializados em produtos digitais com IA e serviços gerenciados de DevOps. 
               Trabalhamos em duas frentes: criação completa de produtos inovadores e infraestrutura robusta para acelerar suas entregas.
             </p>
@@ -274,8 +270,8 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-            <div className="text-2xl font-bold text-secondary-foreground mb-4">
-              arqui.dev the best option in: <span className="animate-pulse">DevOps Platform Engineering</span>*
+            <div className="text-2xl font-bold mb-4">
+              <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
             </div>
             <p className="text-xs text-muted-foreground mb-4">* in our humble opinion</p>
               <p className="text-muted-foreground mb-6">
