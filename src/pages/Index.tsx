@@ -4,13 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Code, Cloud, Zap, Users, CheckCircle, Mail, MapPin, Phone } from "lucide-react";
 import { useLanguage, translations } from "@/hooks/useLanguage";
 import { LanguageToggle } from "@/components/LanguageToggle";
-
 const Index = () => {
-  const { language } = useLanguage();
+  const {
+    language
+  } = useLanguage();
   const t = translations[language];
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b">
         <div className="container mx-auto px-6 py-4">
@@ -56,7 +55,7 @@ const Index = () => {
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-accent">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent to-accent/80"></div>
+        
         <div className="container mx-auto px-6 relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-accent-foreground">{t.servicesTitle}</h2>
@@ -328,8 +327,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
