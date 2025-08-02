@@ -2,8 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Code, Cloud, Zap, Users, CheckCircle, Mail, MapPin, Phone } from "lucide-react";
+import { useLanguage, translations } from "@/hooks/useLanguage";
+import { LanguageToggle } from "@/components/LanguageToggle";
 
 const Index = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -14,11 +19,14 @@ const Index = () => {
               <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Serviços</a>
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">Sobre</a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contato</a>
+              <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">{t.services}</a>
+              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">{t.about}</a>
+              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">{t.contact}</a>
             </nav>
-            <Button>Fale Conosco</Button>
+            <div className="flex items-center gap-4">
+              <LanguageToggle />
+              <Button>{t.talkToUs}</Button>
+            </div>
           </div>
         </div>
       </header>
@@ -31,16 +39,15 @@ const Index = () => {
               <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
             </h1>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Especializados em produtos digitais com IA e serviços gerenciados de DevOps. 
-              Trabalhamos em duas frentes: criação completa de produtos inovadores e infraestrutura robusta para acelerar suas entregas.
+              {t.heroDescription}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8">
-                Criar Produto Digital
+                {t.createDigitalProduct}
                 <ArrowRight className="ml-2" />
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8">
-                DevOps como Serviço
+                {t.devopsAsService}
               </Button>
             </div>
           </div>
@@ -48,12 +55,13 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gradient-to-b from-accent/30 to-background">
-        <div className="container mx-auto px-6">
+      <section id="services" className="py-20 bg-accent">
+        <div className="absolute inset-0 bg-gradient-to-b from-accent to-accent/80"></div>
+        <div className="container mx-auto px-6 relative">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Nossas Duas Frentes de Atuação</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Oferecemos soluções completas para criação de produtos digitais inovadores e serviços gerenciados de DevOps
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-accent-foreground">{t.servicesTitle}</h2>
+            <p className="text-xl text-accent-foreground/80 max-w-2xl mx-auto">
+              {t.servicesDescription}
             </p>
           </div>
           
@@ -63,51 +71,50 @@ const Index = () => {
                 <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                   <Code className="text-primary" size={32} />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">Produtos Digitais com IA</h3>
+                <h3 className="text-2xl font-semibold mb-4">{t.digitalProductsTitle}</h3>
                 <p className="text-muted-foreground mb-6">
-                  Da ideação ao lançamento de produtos digitais inovadores, especialmente no mercado de Inteligência Artificial. 
-                  Acompanhamos todo o ciclo de vida do produto.
+                  {t.digitalProductsDescription}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <h4 className="font-semibold mb-3 text-primary">Strategy & Discovery</h4>
+                    <h4 className="font-semibold mb-3 text-primary">{t.strategyDiscovery}</h4>
                     <ul className="space-y-2">
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Gestão de Produtos
+                        {t.productManagement}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Design Sprint
+                        {t.designSprint}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Discovery & Validação
+                        {t.discoveryValidation}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Oportunidades de Negócio
+                        {t.businessOpportunities}
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-3 text-primary">Development & Launch</h4>
+                    <h4 className="font-semibold mb-3 text-primary">{t.developmentLaunch}</h4>
                     <ul className="space-y-2">
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        POC & MVP
+                        {t.pocMvp}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Arquitetura Técnica
+                        {t.technicalArchitecture}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Gestão de Projetos
+                        {t.projectManagement}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Go-to-Market
+                        {t.goToMarket}
                       </li>
                     </ul>
                   </div>
@@ -120,51 +127,50 @@ const Index = () => {
                 <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                   <Cloud className="text-primary" size={32} />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">DevOps como Serviço</h3>
+                <h3 className="text-2xl font-semibold mb-4">{t.devopsTitle}</h3>
                 <p className="text-muted-foreground mb-6">
-                  Serviço gerenciado completo para cuidar e criar soluções de infraestrutura em nuvem, 
-                  permitindo que você foque no seu core business.
+                  {t.devopsDescription}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <h4 className="font-semibold mb-3 text-primary">Infraestrutura & Cloud</h4>
+                    <h4 className="font-semibold mb-3 text-primary">{t.infrastructureCloud}</h4>
                     <ul className="space-y-2">
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Infraestrutura em Nuvem
+                        {t.cloudInfrastructure}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        CI/CD Pipelines
+                        {t.cicdPipelines}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Kubernetes & Containers
+                        {t.kubernetesContainers}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Infrastructure as Code
+                        {t.infrastructureAsCode}
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-3 text-primary">Operations & SRE</h4>
+                    <h4 className="font-semibold mb-3 text-primary">{t.operationsSre}</h4>
                     <ul className="space-y-2">
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Gestão de Lançamentos
+                        {t.releaseManagement}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Práticas de SRE
+                        {t.srePractices}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Monitoramento 24/7
+                        {t.monitoring247}
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="text-primary mr-2" size={16} />
-                        Security & Compliance
+                        {t.securityCompliance}
                       </li>
                     </ul>
                   </div>
@@ -180,10 +186,9 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6">Nossa Abordagem Completa</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6">{t.aboutTitle}</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Trabalhamos em duas frentes estratégicas: criamos produtos digitais inovadores do zero e oferecemos 
-                DevOps gerenciado para otimizar suas operações. Nossa experiência no mercado de IA nos permite entregar soluções verdadeiramente disruptivas.
+                {t.aboutDescription}
               </p>
               
               <div className="space-y-6">
@@ -192,9 +197,9 @@ const Index = () => {
                     <Users className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Produtos Digitais com IA</h3>
+                    <h3 className="font-semibold mb-2">{t.digitalProductsAI}</h3>
                     <p className="text-muted-foreground">
-                      Da ideação ao go-to-market, especializados em produtos que utilizam Inteligência Artificial
+                      {t.digitalProductsAIDesc}
                     </p>
                   </div>
                 </div>
@@ -204,9 +209,9 @@ const Index = () => {
                     <Zap className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">DevOps Gerenciado</h3>
+                    <h3 className="font-semibold mb-2">{t.managedDevops}</h3>
                     <p className="text-muted-foreground">
-                      Infraestrutura robusta e práticas de SRE para garantir alta disponibilidade e performance
+                      {t.managedDevopsDesc}
                     </p>
                   </div>
                 </div>
@@ -216,9 +221,9 @@ const Index = () => {
                     <CheckCircle className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Ciclo Completo</h3>
+                    <h3 className="font-semibold mb-2">{t.completeCycle}</h3>
                     <p className="text-muted-foreground">
-                      Desde discovery e validação até arquitetura técnica e operação contínua
+                      {t.completeCycleDesc}
                     </p>
                   </div>
                 </div>
@@ -229,19 +234,19 @@ const Index = () => {
               <div className="grid grid-cols-2 gap-8 text-center">
                 <div>
                   <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                  <div className="text-muted-foreground">Projetos Entregues</div>
+                  <div className="text-muted-foreground">{t.projectsDelivered}</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-primary mb-2">99%</div>
-                  <div className="text-muted-foreground">Uptime Garantido</div>
+                  <div className="text-muted-foreground">{t.uptimeGuaranteed}</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-                  <div className="text-muted-foreground">Suporte</div>
+                  <div className="text-muted-foreground">{t.support}</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-primary mb-2">5+</div>
-                  <div className="text-muted-foreground">Anos de Experiência</div>
+                  <div className="text-muted-foreground">{t.yearsExperience}</div>
                 </div>
               </div>
             </div>
@@ -253,13 +258,13 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-primary/90">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-6">
-            Pronto para transformar sua infraestrutura?
+            {t.ctaTitle}
           </h2>
           <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Vamos conversar sobre como podemos acelerar seus projetos e otimizar sua operação
+            {t.ctaDescription}
           </p>
           <Button size="lg" variant="secondary" className="text-lg px-8">
-            Agendar Consulta Gratuita
+            {t.scheduleFreeConsultation}
             <ArrowRight className="ml-2" />
           </Button>
         </div>
@@ -275,7 +280,7 @@ const Index = () => {
             </div>
             <p className="text-xs text-muted-foreground mb-4">* in our humble opinion</p>
               <p className="text-muted-foreground mb-6">
-                Consultoria especializada em DevOps e Arquitetura de Produtos Digitais
+                {t.footerDescription}
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -294,31 +299,31 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="font-semibold text-secondary-foreground mb-4">Produtos Digitais</h3>
+              <h3 className="font-semibold text-secondary-foreground mb-4">{t.digitalProducts}</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>Discovery & Design Sprint</li>
-                <li>Gestão de Produtos</li>
-                <li>POC & MVP Development</li>
+                <li>{t.discoveryValidation} & {t.designSprint}</li>
+                <li>{t.productManagement}</li>
+                <li>{t.pocMvp} Development</li>
                 <li>Produtos com IA</li>
-                <li>Go-to-Market Strategy</li>
+                <li>{t.goToMarket} Strategy</li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-semibold text-secondary-foreground mb-4">DevOps Gerenciado</h3>
+              <h3 className="font-semibold text-secondary-foreground mb-4">{t.managedDevopsFooter}</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>Infraestrutura em Nuvem</li>
-                <li>CI/CD & Automação</li>
-                <li>Práticas de SRE</li>
-                <li>Monitoramento 24/7</li>
-                <li>Gestão de Lançamentos</li>
+                <li>{t.cloudInfrastructure}</li>
+                <li>{t.cicdPipelines} & Automação</li>
+                <li>{t.srePractices}</li>
+                <li>{t.monitoring247}</li>
+                <li>{t.releaseManagement}</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-border mt-12 pt-8 text-center">
             <p className="text-muted-foreground">
-              © 2024 arqui.dev. Todos os direitos reservados.
+              {t.copyright}
             </p>
           </div>
         </div>
