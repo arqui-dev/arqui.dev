@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Code, Cloud, Zap, Users, CheckCircle, Mail, MapPin, Phone } from "lucide-react";
 import { useLanguage, translations } from "@/hooks/useLanguage";
 import { LanguageToggle } from "@/components/LanguageToggle";
+import { ReactTyped } from "react-typed";
+import techBg from "@/assets/tech-terminal-bg.jpg";
 const Index = () => {
   const {
     language
@@ -31,15 +33,35 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="container mx-auto px-6 relative">
+      <section className="relative py-20 lg:py-32 overflow-hidden" style={{
+        backgroundImage: `url(${techBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
+        {/* 80% black overlay */}
+        <div className="absolute inset-0 bg-black/80"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-6xl lg:text-8xl font-bold mb-6">
               <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
             </h1>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              {t.heroDescription}
-            </p>
+            <div className="text-xl mb-8 max-w-3xl mx-auto text-white">
+              <span className="text-primary">The best consulting for: </span>
+              <ReactTyped
+                strings={[
+                  "Architect your DevOps Platform",
+                  "Engineer your AI Digital Product"
+                ]}
+                typeSpeed={50}
+                backSpeed={30}
+                backDelay={2000}
+                loop
+                showCursor={true}
+                cursorChar="|"
+                className="text-secondary font-semibold"
+              />
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8">
                 {t.createDigitalProduct}
