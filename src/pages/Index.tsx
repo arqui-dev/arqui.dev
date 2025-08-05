@@ -275,10 +275,10 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
             <div className="text-2xl font-bold mb-4">
-              <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
+              <span className="text-primary">arqui</span><span className="text-accent-foreground">.dev</span>
             </div>
-            <p className="text-xs text-muted-foreground mb-4">* in our humble opinion</p>
-              <p className="text-muted-foreground mb-6">
+            <p className="text-xs text-accent-foreground mb-4">* in our humble opinion</p>
+              <p className="text-accent-foreground mb-6">
                 {t.footerDescription}
               </p>
                 <div className="space-y-3">
