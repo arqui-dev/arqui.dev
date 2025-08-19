@@ -19,11 +19,7 @@ const Index = () => {
             <div className="text-2xl font-bold font-fira">
               <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
             </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="#services" className="text-muted-foreground hover:text-primary transition-none font-ibm font-medium uppercase tracking-wider">{t.services}</a>
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-none font-ibm font-medium uppercase tracking-wider">{t.about}</a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-none font-ibm font-medium uppercase tracking-wider">{t.contact}</a>
-            </nav>
+            
             <div className="flex items-center gap-4">
               <LanguageToggle />
               <Button className="btn-brutalist bg-primary text-primary-foreground border-primary">{t.talkToUs}</Button>
@@ -51,7 +47,7 @@ const Index = () => {
               <ReactTyped strings={["Architect your DevOps Platform", "Engineer your AI Digital Product"]} typeSpeed={50} backSpeed={30} backDelay={2000} loop showCursor={true} cursorChar="|" className="text-secondary font-bold font-fira" />
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 btn-brutalist bg-primary text-primary-foreground border-primary">
+              <Button size="lg" className="text-lg px-8 btn-brutalist bg-primary border-primary text-[#fff066]">
                 {t.createDigitalProduct}
                 <ArrowRight className="ml-2" />
               </Button>
@@ -80,8 +76,8 @@ const Index = () => {
                 <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                   <Code className="text-primary" size={32} />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">{t.digitalProductsTitle}</h3>
-                <p className="text-muted-foreground mb-6">
+                <h3 className="font-semibold mb-4 text-[transparen#FFF066t] text-[#fff066]">{t.digitalProductsTitle}</h3>
+                <p className="mb-6 text-[#fff066]">
                   {t.digitalProductsDescription}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -195,7 +191,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6">{t.aboutTitle}</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[#fff066]">{t.aboutTitle}</h2>
               <p className="text-lg mb-8 text-secondary">
                 {t.aboutDescription}
               </p>
@@ -266,10 +262,10 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-primary/90">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[#fff066]">
             {t.ctaTitle}
           </h2>
-          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-[#fff066]">
             {t.ctaDescription}
           </p>
           <Button size="lg" variant="secondary" className="text-lg px-8">
