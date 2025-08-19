@@ -285,31 +285,31 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
             <div className="text-2xl font-bold mb-4">
-              <span className="text-primary">arqui</span><span className="text-accent-foreground">.dev</span>
+              <span className="text-primary">arqui</span><span className="text-accent">.dev</span>
             </div>
-            <p className="text-xs text-accent-foreground mb-4">* in our humble opinion</p>
-              <p className="text-accent-foreground mb-6">
+            <p className="text-xs text-accent mb-4">* in our humble opinion</p>
+              <p className="text-accent mb-6">
                 {t.footerDescription}
               </p>
                 <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Mail size={20} className="text-primary" />
-                  <span className="text-accent-foreground">contato@arqui.dev</span>
+                  <span className="text-accent">contato@arqui.dev</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone size={20} className="text-primary" />
-                  <span className="text-accent-foreground">+55 (11) 99999-9999</span>
+                  <span className="text-accent">+55 (11) 99999-9999</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin size={20} className="text-primary" />
-                  <span className="text-accent-foreground">São Paulo, Brasil</span>
+                  <span className="text-accent">São Paulo, Brasil</span>
                 </div>
               </div>
             </div>
             
             <div>
-              <h3 className="font-semibold text-accent-foreground mb-4">{t.digitalProducts}</h3>
-              <ul className="space-y-2 text-accent-foreground">
+              <h3 className="font-semibold text-accent mb-4">{t.digitalProducts}</h3>
+              <ul className="space-y-2 text-accent">
                 <li>{t.discoveryValidation} & {t.designSprint}</li>
                 <li>{t.productManagement}</li>
                 <li>{t.pocMvp} Development</li>
@@ -319,8 +319,8 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="font-semibold text-accent-foreground mb-4">{t.managedDevopsFooter}</h3>
-              <ul className="space-y-2 text-accent-foreground">
+              <h3 className="font-semibold text-accent mb-4">{t.managedDevopsFooter}</h3>
+              <ul className="space-y-2 text-accent">
                 <li>{t.cloudInfrastructure}</li>
                 <li>{t.cicdPipelines} & Automação</li>
                 <li>{t.srePractices}</li>
@@ -331,7 +331,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-border mt-12 pt-8 text-center">
-            <p className="text-accent-foreground">
+            <p className="text-accent">
               {t.copyright}
             </p>
           </div>
