@@ -34,11 +34,11 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden" style={{
-        backgroundImage: `url(${techBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}>
+      backgroundImage: `url(${techBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
         {/* 80% black overlay */}
         <div className="absolute inset-0 bg-black/80"></div>
         <div className="container mx-auto px-6 relative z-10">
@@ -48,19 +48,7 @@ const Index = () => {
             </h1>
             <div className="text-xl mb-8 max-w-3xl mx-auto text-white font-ibm">
               <span className="text-primary font-bold">The best consulting for: </span>
-              <ReactTyped
-                strings={[
-                  "Architect your DevOps Platform",
-                  "Engineer your AI Digital Product"
-                ]}
-                typeSpeed={50}
-                backSpeed={30}
-                backDelay={2000}
-                loop
-                showCursor={true}
-                cursorChar="|"
-                className="text-secondary font-bold font-fira"
-              />
+              <ReactTyped strings={["Architect your DevOps Platform", "Engineer your AI Digital Product"]} typeSpeed={50} backSpeed={30} backDelay={2000} loop showCursor={true} cursorChar="|" className="text-secondary font-bold font-fira" />
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 btn-brutalist bg-primary text-primary-foreground border-primary">
@@ -76,12 +64,12 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-accent">
+      <section id="services" className="py-20 bg-[#fff066]">
         
         <div className="container mx-auto px-6 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-accent-foreground">{t.servicesTitle}</h2>
-            <p className="text-xl text-accent-foreground/80 max-w-2xl mx-auto">
+          <div className="text-center mb-16 bg-transparent">
+            <h2 className="text-3xl font-bold mb-4 lg:text-[4CA7F8] text-[#ff00b0]">{t.servicesTitle}</h2>
+            <p className="max-w-2xl mx-auto text-[4CA7F8] text-[#4ca7f8]">
               {t.servicesDescription}
             </p>
           </div>
@@ -208,7 +196,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">{t.aboutTitle}</h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg mb-8 text-[#fff066]">
                 {t.aboutDescription}
               </p>
               
@@ -218,8 +206,8 @@ const Index = () => {
                     <Users className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">{t.digitalProductsAI}</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="font-semibold mb-2 text-[#fff066]">{t.digitalProductsAI}</h3>
+                    <p className="text-[#fff066]">
                       {t.digitalProductsAIDesc}
                     </p>
                   </div>
@@ -231,7 +219,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2">{t.managedDevops}</h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-[#fff066]">
                       {t.managedDevopsDesc}
                     </p>
                   </div>
@@ -243,7 +231,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-2">{t.completeCycle}</h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-[#fff066]">
                       {t.completeCycleDesc}
                     </p>
                   </div>
