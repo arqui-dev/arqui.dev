@@ -46,7 +46,7 @@ const Index = () => {
             <h1 className="text-6xl lg:text-8xl font-bold mb-6 font-fira">
               <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
             </h1>
-            <div className="text-xl mb-8 max-w-3xl mx-auto text-white font-ibm">
+            <div className="text-xl mb-8 max-w-3xl mx-auto text-secondary font-ibm">
               <span className="text-primary font-bold">The best consulting for: </span>
               <ReactTyped strings={["Architect your DevOps Platform", "Engineer your AI Digital Product"]} typeSpeed={50} backSpeed={30} backDelay={2000} loop showCursor={true} cursorChar="|" className="text-secondary font-bold font-fira" />
             </div>
@@ -64,12 +64,12 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-[#fff066]">
+      <section id="services" className="py-20 bg-secondary">
         
         <div className="container mx-auto px-6 relative">
           <div className="text-center mb-16 bg-transparent">
-            <h2 className="text-3xl font-bold mb-4 lg:text-[4CA7F8] text-[#ff00b0]">{t.servicesTitle}</h2>
-            <p className="max-w-2xl mx-auto text-[4CA7F8] text-[#4ca7f8]">
+            <h2 className="text-3xl font-bold mb-4 text-accent">{t.servicesTitle}</h2>
+            <p className="max-w-2xl mx-auto text-accent">
               {t.servicesDescription}
             </p>
           </div>
@@ -196,7 +196,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">{t.aboutTitle}</h2>
-              <p className="text-lg mb-8 text-[#fff066]">
+              <p className="text-lg mb-8 text-secondary">
                 {t.aboutDescription}
               </p>
               
@@ -206,8 +206,8 @@ const Index = () => {
                     <Users className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2 text-[#fff066]">{t.digitalProductsAI}</h3>
-                    <p className="text-[#fff066]">
+                    <h3 className="font-semibold mb-2 text-secondary">{t.digitalProductsAI}</h3>
+                    <p className="text-secondary">
                       {t.digitalProductsAIDesc}
                     </p>
                   </div>
@@ -218,8 +218,8 @@ const Index = () => {
                     <Zap className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">{t.managedDevops}</h3>
-                    <p className="text-[#fff066]">
+                    <h3 className="font-semibold mb-2 text-secondary">{t.managedDevops}</h3>
+                    <p className="text-secondary">
                       {t.managedDevopsDesc}
                     </p>
                   </div>
@@ -230,8 +230,8 @@ const Index = () => {
                     <CheckCircle className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">{t.completeCycle}</h3>
-                    <p className="text-[#fff066]">
+                    <h3 className="font-semibold mb-2 text-secondary">{t.completeCycle}</h3>
+                    <p className="text-secondary">
                       {t.completeCycleDesc}
                     </p>
                   </div>
