@@ -18,18 +18,19 @@ All colors MUST be HSL. Sharp edges, high contrast, bold typography.
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 95%;
 
-    /* PRIMARY - Electric blue, tech-inspired */
-    --primary: 200 100% 50%;
-    --primary-foreground: 0 0% 4%;
-    --primary-glow: 200 100% 60%;
+    /* PRIMARY - Electric magenta, bold and vibrant */
+    --primary: 320 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 320 100% 60%;
 
-    /* SECONDARY - Sharp yellow accent */
-    --secondary: 45 100% 50%;
+    /* SECONDARY - Bright yellow accent */
+    --secondary: 56 100% 70%;
     --secondary-foreground: 0 0% 4%;
 
     --muted: 0 0% 12%;
     --muted-foreground: 0 0% 70%;
 
+    /* ACCENT - Electric blue as third color */
     --accent: 200 100% 50%;
     --accent-foreground: 0 0% 4%;
 
@@ -72,11 +73,11 @@ All colors MUST be HSL. Sharp edges, high contrast, bold typography.
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 200 100% 50%;
-    --primary-foreground: 0 0% 4%;
-    --primary-glow: 200 100% 60%;
+    --primary: 320 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 320 100% 60%;
 
-    --secondary: 45 100% 50%;
+    --secondary: 56 100% 70%;
     --secondary-foreground: 0 0% 4%;
 
     --muted: 0 0% 12%;
