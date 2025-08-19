@@ -63,6 +63,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				'fira': ['Fira Code', 'monospace'],
+				'ibm': ['IBM Plex Sans', 'sans-serif'],
+				'ibm-mono': ['IBM Plex Mono', 'monospace'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',

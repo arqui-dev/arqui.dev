@@ -13,20 +13,20 @@ const Index = () => {
   const t = translations[language];
   return <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b">
+      <header className="border-b-2 border-primary bg-card">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold">
+            <div className="text-2xl font-bold font-fira">
               <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">{t.services}</a>
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">{t.about}</a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">{t.contact}</a>
+              <a href="#services" className="text-muted-foreground hover:text-primary transition-none font-ibm font-medium uppercase tracking-wider">{t.services}</a>
+              <a href="#about" className="text-muted-foreground hover:text-primary transition-none font-ibm font-medium uppercase tracking-wider">{t.about}</a>
+              <a href="#contact" className="text-muted-foreground hover:text-primary transition-none font-ibm font-medium uppercase tracking-wider">{t.contact}</a>
             </nav>
             <div className="flex items-center gap-4">
               <LanguageToggle />
-              <Button>{t.talkToUs}</Button>
+              <Button className="btn-brutalist bg-primary text-primary-foreground border-primary">{t.talkToUs}</Button>
             </div>
           </div>
         </div>
@@ -43,11 +43,11 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/80"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-6xl lg:text-8xl font-bold mb-6">
+            <h1 className="text-6xl lg:text-8xl font-bold mb-6 font-fira">
               <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
             </h1>
-            <div className="text-xl mb-8 max-w-3xl mx-auto text-white">
-              <span className="text-primary">The best consulting for: </span>
+            <div className="text-xl mb-8 max-w-3xl mx-auto text-white font-ibm">
+              <span className="text-primary font-bold">The best consulting for: </span>
               <ReactTyped
                 strings={[
                   "Architect your DevOps Platform",
@@ -59,15 +59,15 @@ const Index = () => {
                 loop
                 showCursor={true}
                 cursorChar="|"
-                className="text-secondary font-semibold"
+                className="text-secondary font-bold font-fira"
               />
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
+              <Button size="lg" className="text-lg px-8 btn-brutalist bg-primary text-primary-foreground border-primary">
                 {t.createDigitalProduct}
                 <ArrowRight className="ml-2" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
+              <Button variant="outline" size="lg" className="text-lg px-8 btn-brutalist bg-transparent text-primary border-primary hover:bg-primary hover:text-primary-foreground">
                 {t.devopsAsService}
               </Button>
             </div>

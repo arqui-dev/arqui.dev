@@ -38,45 +38,45 @@ export const translations = {
     digitalProductsTitle: 'Produtos Digitais com IA',
     digitalProductsDescription: 'Da ideação ao lançamento de produtos digitais inovadores, especialmente no mercado de Inteligência Artificial. Acompanhamos todo o ciclo de vida do produto.',
     
-    strategyDiscovery: 'Strategy & Discovery',
+    strategyDiscovery: 'Estratégia & Descoberta',
     productManagement: 'Gestão de Produtos',
-    designSprint: 'Design Sprint',
-    discoveryValidation: 'Discovery & Validação',
+    designSprint: 'Sprint de Design',
+    discoveryValidation: 'Descoberta & Validação',
     businessOpportunities: 'Oportunidades de Negócio',
     
-    developmentLaunch: 'Development & Launch',
+    developmentLaunch: 'Desenvolvimento & Lançamento',
     pocMvp: 'POC & MVP',
     technicalArchitecture: 'Arquitetura Técnica',
     projectManagement: 'Gestão de Projetos',
-    goToMarket: 'Go-to-Market',
+    goToMarket: 'Lançamento no Mercado',
     
     devopsTitle: 'DevOps como Serviço',
     devopsDescription: 'Serviço gerenciado completo para cuidar e criar soluções de infraestrutura em nuvem, permitindo que você foque no seu core business.',
     
-    infrastructureCloud: 'Infraestrutura & Cloud',
+    infrastructureCloud: 'Infraestrutura & Nuvem',
     cloudInfrastructure: 'Infraestrutura em Nuvem',
-    cicdPipelines: 'CI/CD Pipelines',
-    kubernetesContainers: 'Kubernetes & Containers',
-    infrastructureAsCode: 'Infrastructure as Code',
+    cicdPipelines: 'Pipelines de CI/CD',
+    kubernetesContainers: 'Kubernetes e Contêineres',
+    infrastructureAsCode: 'Infraestrutura como Código',
     
-    operationsSre: 'Operations & SRE',
+    operationsSre: 'Operações & SRE',
     releaseManagement: 'Gestão de Lançamentos',
     srePractices: 'Práticas de SRE',
     monitoring247: 'Monitoramento 24/7',
-    securityCompliance: 'Security & Compliance',
+    securityCompliance: 'Segurança & Conformidade',
     
     // About
     aboutTitle: 'Nossa Abordagem Completa',
     aboutDescription: 'Trabalhamos em duas frentes estratégicas: criamos produtos digitais inovadores do zero e oferecemos DevOps gerenciado para otimizar suas operações. Nossa experiência no mercado de IA nos permite entregar soluções verdadeiramente disruptivas.',
     
     digitalProductsAI: 'Produtos Digitais com IA',
-    digitalProductsAIDesc: 'Da ideação ao go-to-market, especializados em produtos que utilizam Inteligência Artificial',
+    digitalProductsAIDesc: 'Da ideação ao lançamento no mercado, especializados em produtos que utilizam Inteligência Artificial',
     
     managedDevops: 'DevOps Gerenciado',
     managedDevopsDesc: 'Infraestrutura robusta e práticas de SRE para garantir alta disponibilidade e performance',
     
     completeCycle: 'Ciclo Completo',
-    completeCycleDesc: 'Desde discovery e validação até arquitetura técnica e operação contínua',
+    completeCycleDesc: 'Desde descoberta e validação até arquitetura técnica e operação contínua',
     
     projectsDelivered: 'Projetos Entregues',
     uptimeGuaranteed: 'Uptime Garantido',
