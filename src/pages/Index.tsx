@@ -46,7 +46,7 @@ const Index = () => {
               <span className="text-primary font-bold">The best consulting for: </span>
               <ReactTyped strings={["Architect your DevOps Platform", "Engineer your AI Digital Product"]} typeSpeed={50} backSpeed={30} backDelay={2000} loop showCursor={true} cursorChar="|" className="text-secondary font-bold font-fira" />
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Button size="lg" className="text-lg px-8 btn-brutalist bg-primary border-primary text-[#fff066]">
                 {t.createDigitalProduct}
                 <ArrowRight className="ml-2" />
@@ -55,136 +55,121 @@ const Index = () => {
                 {t.devopsAsService}
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Gradient Transition */}
-      <div className="h-32 bg-gradient-to-b from-black/80 via-black/40 to-secondary"></div>
+            {/* Services Cards in Hero */}
+            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-secondary">
+                <CardContent className="p-8">
+                  <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                    <Code className="text-accent" size={32} />
+                  </div>
+                  <h3 className="font-semibold mb-4 text-primary text-2xl">{t.digitalProductsTitle}</h3>
+                  <p className="mb-6 text-accent">
+                    {t.digitalProductsDescription}
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <h4 className="font-semibold mb-3 text-primary">{t.strategyDiscovery}</h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.productManagement}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.designSprint}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.discoveryValidation}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.businessOpportunities}</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3 text-primary">{t.developmentLaunch}</h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.pocMvp}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.technicalArchitecture}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.projectManagement}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.goToMarket}</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-secondary">
-        
-        <div className="container mx-auto px-6 relative">
-          <div className="text-center mb-16 bg-transparent">
-            <h2 className="text-3xl font-bold mb-4 text-accent">{t.servicesTitle}</h2>
-            <p className="max-w-2xl mx-auto text-accent">
-              {t.servicesDescription}
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-8">
-            <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                  <Code className="text-primary" size={32} />
-                </div>
-                <h3 className="font-semibold mb-4 text-[transparen#FFF066t] text-[#fff066]">{t.digitalProductsTitle}</h3>
-                <p className="mb-6 text-[#fff066]">
-                  {t.digitalProductsDescription}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="font-semibold mb-3 text-primary">{t.strategyDiscovery}</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.productManagement}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.designSprint}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.discoveryValidation}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.businessOpportunities}
-                      </li>
-                    </ul>
+              <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-secondary">
+                <CardContent className="p-8">
+                  <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                    <Cloud className="text-accent" size={32} />
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-3 text-primary">{t.developmentLaunch}</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.pocMvp}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.technicalArchitecture}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.projectManagement}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.goToMarket}
-                      </li>
-                    </ul>
+                  <h3 className="text-2xl font-semibold mb-4 text-primary">{t.devopsTitle}</h3>
+                  <p className="text-accent mb-6">
+                    {t.devopsDescription}
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <h4 className="font-semibold mb-3 text-primary">{t.infrastructureCloud}</h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.cloudInfrastructure}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.cicdPipelines}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.kubernetesContainers}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.infrastructureAsCode}</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3 text-primary">{t.operationsSre}</h4>
+                      <ul className="space-y-2">
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.releaseManagement}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.srePractices}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.monitoring247}</span>
+                        </li>
+                        <li className="flex items-center text-sm">
+                          <CheckCircle className="text-accent mr-2" size={16} />
+                          <span className="text-accent">{t.securityCompliance}</span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                  <Cloud className="text-primary" size={32} />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4">{t.devopsTitle}</h3>
-                <p className="text-muted-foreground mb-6">
-                  {t.devopsDescription}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="font-semibold mb-3 text-primary">{t.infrastructureCloud}</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.cloudInfrastructure}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.cicdPipelines}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.kubernetesContainers}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.infrastructureAsCode}
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-3 text-primary">{t.operationsSre}</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.releaseManagement}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.srePractices}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.monitoring247}
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="text-primary mr-2" size={16} />
-                        {t.securityCompliance}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
