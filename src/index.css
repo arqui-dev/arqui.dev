@@ -130,6 +130,7 @@ All colors MUST be HSL. Sharp edges, high contrast, bold typography.
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.02em;
+    text-shadow: 2px 2px 0px hsl(var(--primary));
   }
 
   /* CODE/MONOSPACE ELEMENTS */

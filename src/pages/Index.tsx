@@ -59,6 +59,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Gradient Transition */}
+      <div className="h-32 bg-gradient-to-b from-black/80 via-black/40 to-secondary"></div>
+
       {/* Services Section */}
       <section id="services" className="py-20 bg-secondary">
         
