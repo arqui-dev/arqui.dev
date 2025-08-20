@@ -46,15 +46,7 @@ const Index = () => {
               <span className="text-primary font-bold">The best consulting for: </span>
               <ReactTyped strings={["Architect your DevOps Platform", "Engineer your AI Digital Product"]} typeSpeed={50} backSpeed={30} backDelay={2000} loop showCursor={true} cursorChar="|" className="text-secondary font-bold font-fira" />
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button size="lg" className="text-lg px-8 btn-brutalist bg-primary border-primary text-[#fff066]">
-                {t.createDigitalProduct}
-                <ArrowRight className="ml-2" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 btn-brutalist bg-transparent text-primary border-primary hover:bg-primary hover:text-primary-foreground">
-                {t.devopsAsService}
-              </Button>
-            </div>
+            
 
             {/* Services Cards in Hero */}
             <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
