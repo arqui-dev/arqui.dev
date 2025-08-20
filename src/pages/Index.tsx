@@ -51,11 +51,13 @@ const Index = () => {
             {/* Services Cards in Hero */}
             <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-secondary">
-                <CardContent className="p-8">
-                  <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                    <Code className="text-accent" size={32} />
+                <CardContent className="p-8 text-left">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="bg-black w-16 h-16 rounded-lg flex items-center justify-center">
+                      <Code className="text-pink-500" size={32} />
+                    </div>
+                    <h3 className="font-semibold text-pink-500 text-2xl text-shadow-blue">{t.digitalProductsTitle}</h3>
                   </div>
-                  <h3 className="font-semibold mb-4 text-primary text-2xl">{t.digitalProductsTitle}</h3>
                   <p className="mb-6 text-accent">
                     {t.digitalProductsDescription}
                   </p>
@@ -107,11 +109,13 @@ const Index = () => {
               </Card>
 
               <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-secondary">
-                <CardContent className="p-8">
-                  <div className="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                    <Cloud className="text-accent" size={32} />
+                <CardContent className="p-8 text-left">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="bg-black w-16 h-16 rounded-lg flex items-center justify-center">
+                      <Cloud className="text-pink-500" size={32} />
+                    </div>
+                    <h3 className="text-2xl font-semibold text-pink-500 text-shadow-blue">{t.devopsTitle}</h3>
                   </div>
-                  <h3 className="text-2xl font-semibold mb-4 text-primary">{t.devopsTitle}</h3>
                   <p className="text-accent mb-6">
                     {t.devopsDescription}
                   </p>

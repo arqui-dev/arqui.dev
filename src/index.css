@@ -149,4 +149,9 @@ All colors MUST be HSL. Sharp edges, high contrast, bold typography.
     transform: translate(-2px, -2px);
     box-shadow: 4px 4px 0px currentColor;
   }
+
+  /* CUSTOM TEXT SHADOW UTILITY */
+  .text-shadow-blue {
+    text-shadow: 2px 2px 0px #3b82f6;
+  }
 }
