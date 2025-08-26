@@ -47,7 +47,9 @@ const Index = () => {
               <div className="mb-6">
                 <ReactTyped strings={language === 'pt' ? ["Arquitete sua Plataforma DevOps", "Engenharia de Produtos Digitais com IA"] : ["Architect your DevOps Platform", "Engineer your AI Digital Product"]} typeSpeed={50} backSpeed={30} backDelay={2000} loop showCursor={true} cursorChar="|" className="text-secondary font-bold font-fira" />
               </div>
-              <h6 className="text-sm text-accent font-mono" style={{ marginTop: '1.5rem' }}>{t.humbleOpinion}</h6>
+              <h6 className="text-sm text-accent font-mono" style={{
+              marginTop: '1.5rem'
+            }}>{t.humbleOpinion}</h6>
             </div>
             
 
@@ -255,10 +257,7 @@ const Index = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto text-secondary">
             {t.ctaDescription}
           </p>
-          <Button size="lg" variant="secondary" className="text-lg px-8">
-            {t.scheduleFreeConsultation}
-            <ArrowRight className="ml-2" />
-          </Button>
+          
         </div>
       </section>
 
