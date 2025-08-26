@@ -38,19 +38,21 @@ const Index = () => {
         {/* 80% black overlay */}
         <div className="absolute inset-0 bg-black/80"></div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl text-left">
             <h1 className="text-6xl lg:text-8xl font-bold mb-6 font-fira">
               <span className="text-primary text-shadow-blue">arqui</span><span className="text-secondary text-shadow-pink">.dev</span>
             </h1>
-            <div className="text-xl mb-8 max-w-3xl mx-auto text-secondary font-ibm">
+            <div className="text-xl mb-8 max-w-3xl text-secondary font-ibm">
               <span className="text-primary font-bold">{t.heroTitle} </span>
-              <h6 className="text-sm text-muted-foreground mb-2 italic">{t.humbleOpinion}</h6>
-              <ReactTyped strings={language === 'pt' ? ["Arquitete sua Plataforma DevOps", "Engenharia de Produtos Digitais com IA"] : ["Architect your DevOps Platform", "Engineer your AI Digital Product"]} typeSpeed={50} backSpeed={30} backDelay={2000} loop showCursor={true} cursorChar="|" className="text-secondary font-bold font-fira" />
+              <div className="mb-6">
+                <ReactTyped strings={language === 'pt' ? ["Arquitete sua Plataforma DevOps", "Engenharia de Produtos Digitais com IA"] : ["Architect your DevOps Platform", "Engineer your AI Digital Product"]} typeSpeed={50} backSpeed={30} backDelay={2000} loop showCursor={true} cursorChar="|" className="text-secondary font-bold font-fira" />
+              </div>
+              <h6 className="text-sm text-accent font-mono" style={{ marginTop: '1.5rem' }}>{t.humbleOpinion}</h6>
             </div>
             
 
             {/* Services Cards in Hero */}
-            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl">
               <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-secondary">
                 <CardContent className="p-8 text-left">
                   <div className="flex items-center gap-4 mb-6">
