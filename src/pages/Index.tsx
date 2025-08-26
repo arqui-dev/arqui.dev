@@ -16,9 +16,7 @@ const Index = () => {
       <header className="border-b-2 border-primary bg-card">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold font-fira">
-              <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
-            </div>
+            
             
             <div className="flex items-center gap-4">
               <LanguageToggle />
