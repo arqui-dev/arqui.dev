@@ -130,7 +130,6 @@ All colors MUST be HSL. Sharp edges, high contrast, bold typography.
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.02em;
-    text-shadow: 2px 2px 0px hsl(var(--primary));
   }
 
   /* CODE/MONOSPACE ELEMENTS */
@@ -150,8 +149,16 @@ All colors MUST be HSL. Sharp edges, high contrast, bold typography.
     box-shadow: 4px 4px 0px currentColor;
   }
 
-  /* CUSTOM TEXT SHADOW UTILITY */
+  /* CUSTOM TEXT SHADOW UTILITIES */
   .text-shadow-blue {
-    text-shadow: 2px 2px 0px #3b82f6;
+    text-shadow: 2px 2px 0px hsl(200 100% 50%);
+  }
+  
+  .text-shadow-pink {
+    text-shadow: 2px 2px 0px hsl(320 100% 50%);
+  }
+  
+  .text-shadow-yellow {
+    text-shadow: 2px 2px 0px hsl(56 100% 70%);
   }
 }

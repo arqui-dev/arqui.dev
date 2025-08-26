@@ -40,7 +40,7 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-6xl lg:text-8xl font-bold mb-6 font-fira">
-              <span className="text-primary">arqui</span><span className="text-secondary">.dev</span>
+              <span className="text-primary text-shadow-blue">arqui</span><span className="text-secondary text-shadow-pink">.dev</span>
             </h1>
             <div className="text-xl mb-8 max-w-3xl mx-auto text-secondary font-ibm">
               <span className="text-primary font-bold">The best consulting for: </span>
@@ -63,7 +63,7 @@ const Index = () => {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold mb-3 text-primary">{t.strategyDiscovery}</h4>
+                      <h4 className="font-semibold mb-3 text-primary text-shadow-blue">{t.strategyDiscovery}</h4>
                       <ul className="space-y-2">
                         <li className="flex items-center text-sm">
                           <CheckCircle className="text-accent mr-2" size={16} />
@@ -84,7 +84,7 @@ const Index = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-3 text-primary">{t.developmentLaunch}</h4>
+                      <h4 className="font-semibold mb-3 text-primary text-shadow-blue">{t.developmentLaunch}</h4>
                       <ul className="space-y-2">
                         <li className="flex items-center text-sm">
                           <CheckCircle className="text-accent mr-2" size={16} />
@@ -121,7 +121,7 @@ const Index = () => {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold mb-3 text-primary">{t.infrastructureCloud}</h4>
+                      <h4 className="font-semibold mb-3 text-primary text-shadow-blue">{t.infrastructureCloud}</h4>
                       <ul className="space-y-2">
                         <li className="flex items-center text-sm">
                           <CheckCircle className="text-accent mr-2" size={16} />
@@ -142,7 +142,7 @@ const Index = () => {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-3 text-primary">{t.operationsSre}</h4>
+                      <h4 className="font-semibold mb-3 text-primary text-shadow-blue">{t.operationsSre}</h4>
                       <ul className="space-y-2">
                         <li className="flex items-center text-sm">
                           <CheckCircle className="text-accent mr-2" size={16} />
@@ -175,7 +175,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[#fff066]">{t.aboutTitle}</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-secondary text-shadow-pink">{t.aboutTitle}</h2>
               <p className="text-lg mb-8 text-secondary">
                 {t.aboutDescription}
               </p>
@@ -186,7 +186,7 @@ const Index = () => {
                     <Users className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2 text-secondary">{t.digitalProductsAI}</h3>
+                    <h3 className="font-semibold mb-2 text-secondary text-shadow-pink">{t.digitalProductsAI}</h3>
                     <p className="text-secondary">
                       {t.digitalProductsAIDesc}
                     </p>
@@ -198,7 +198,7 @@ const Index = () => {
                     <Zap className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2 text-secondary">{t.managedDevops}</h3>
+                    <h3 className="font-semibold mb-2 text-secondary text-shadow-pink">{t.managedDevops}</h3>
                     <p className="text-secondary">
                       {t.managedDevopsDesc}
                     </p>
@@ -210,7 +210,7 @@ const Index = () => {
                     <CheckCircle className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2 text-secondary">{t.completeCycle}</h3>
+                    <h3 className="font-semibold mb-2 text-secondary text-shadow-pink">{t.completeCycle}</h3>
                     <p className="text-secondary">
                       {t.completeCycleDesc}
                     </p>
@@ -246,10 +246,10 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-primary/90">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[#fff066]">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-secondary text-shadow-pink">
             {t.ctaTitle}
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-[#fff066]">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-secondary">
             {t.ctaDescription}
           </p>
           <Button size="lg" variant="secondary" className="text-lg px-8">
@@ -265,7 +265,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
             <div className="text-2xl font-bold mb-4">
-              <span className="text-primary">arqui</span><span className="text-accent">.dev</span>
+              <span className="text-primary text-shadow-blue">arqui</span><span className="text-accent text-shadow-yellow">.dev</span>
             </div>
             <p className="text-xs text-accent mb-4">* in our humble opinion</p>
               <p className="text-accent mb-6">
@@ -288,7 +288,7 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="font-semibold text-accent mb-4">{t.digitalProducts}</h3>
+              <h3 className="font-semibold text-accent text-shadow-yellow mb-4">{t.digitalProducts}</h3>
               <ul className="space-y-2 text-accent">
                 <li>{t.discoveryValidation} & {t.designSprint}</li>
                 <li>{t.productManagement}</li>
@@ -299,7 +299,7 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="font-semibold text-accent mb-4">{t.managedDevopsFooter}</h3>
+              <h3 className="font-semibold text-accent text-shadow-yellow mb-4">{t.managedDevopsFooter}</h3>
               <ul className="space-y-2 text-accent">
                 <li>{t.cloudInfrastructure}</li>
                 <li>{t.cicdPipelines} & Automação</li>
