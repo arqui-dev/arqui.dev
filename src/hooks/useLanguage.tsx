@@ -111,7 +111,7 @@ export const translations = {
     yearsExperience: 'Anos de Experiência',
     
     // CTA
-    ctaTitle: 'Pronto para transformar sua infraestrutura?',
+    ctaTitle: 'Pronto para transformar seu negócio?',
     ctaDescription: 'Vamos conversar sobre como podemos acelerar seus projetos e otimizar sua operação',
     scheduleFreeConsultation: 'Agendar Consulta Gratuita',
     
@@ -188,7 +188,7 @@ export const translations = {
     yearsExperience: 'Years of Experience',
     
     // CTA
-    ctaTitle: 'Ready to transform your infrastructure?',
+    ctaTitle: 'Ready to transform your business?',
     ctaDescription: "Let's talk about how we can accelerate your projects and optimize your operation",
     scheduleFreeConsultation: 'Schedule Free Consultation',
     
