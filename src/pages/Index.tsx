@@ -64,7 +64,7 @@ const Index = () => {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold mb-3 text-primary text-shadow-blue">{t.strategyDiscovery}</h4>
+                      <h4 className="font-semibold mb-3 text-primary ">{t.strategyDiscovery}</h4>
                       <ul className="space-y-2">
                         <li className="flex items-center text-sm">
                           <CheckCircle className="text-accent mr-2" size={16} />
