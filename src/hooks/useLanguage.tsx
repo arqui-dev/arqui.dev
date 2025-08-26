@@ -1,15 +1,26 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { useEffect } from 'react';
+
+// Auto-detect language based on user location
+const getDefaultLanguage = (): 'pt' | 'en' => {
+  // Check if user is from Brazil or Portugal
+  const userLanguage = navigator.language || navigator.languages?.[0] || 'en';
+  const isPortuguese = userLanguage.startsWith('pt') || 
+                      userLanguage.includes('br') || 
+                      userLanguage.includes('pt');
+  return isPortuguese ? 'pt' : 'en';
+};
 
 interface LanguageState {
   language: 'pt' | 'en';
   setLanguage: (lang: 'pt' | 'en') => void;
 }
 
-export const useLanguage = create<LanguageState>()(
+const useLanguageStore = create<LanguageState>()(
   persist(
     (set) => ({
-      language: 'pt',
+      language: getDefaultLanguage(),
       setLanguage: (lang) => set({ language: lang }),
     }),
     {
@@ -17,6 +28,20 @@ export const useLanguage = create<LanguageState>()(
     }
   )
 );
+
+export const useLanguage = () => {
+  const { language, setLanguage } = useLanguageStore();
+  
+  // Set initial language based on user location on first load
+  useEffect(() => {
+    const stored = localStorage.getItem('language-storage');
+    if (!stored) {
+      setLanguage(getDefaultLanguage());
+    }
+  }, [setLanguage]);
+
+  return { language, setLanguage };
+};
 
 export const translations = {
   pt: {
@@ -27,6 +52,8 @@ export const translations = {
     talkToUs: 'Fale Conosco',
     
     // Hero
+    heroTitle: 'A melhor consultoria para:',
+    humbleOpinion: '*na nossa humilde opinião',
     heroDescription: 'Especializados em produtos digitais com IA e serviços gerenciados de DevOps. Trabalhamos em duas frentes: criação completa de produtos inovadores e infraestrutura robusta para acelerar suas entregas.',
     createDigitalProduct: 'Criar Produto Digital',
     devopsAsService: 'DevOps como Serviço',
@@ -102,6 +129,8 @@ export const translations = {
     talkToUs: 'Contact Us',
     
     // Hero
+    heroTitle: 'The best consulting for:',
+    humbleOpinion: '*in our humble opinion',
     heroDescription: 'Specialized in AI-powered digital products and managed DevOps services. We work on two fronts: complete creation of innovative products and robust infrastructure to accelerate your deliveries.',
     createDigitalProduct: 'Create Digital Product',
     devopsAsService: 'DevOps as a Service',

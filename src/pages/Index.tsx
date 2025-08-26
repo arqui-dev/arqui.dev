@@ -43,8 +43,9 @@ const Index = () => {
               <span className="text-primary text-shadow-blue">arqui</span><span className="text-secondary text-shadow-pink">.dev</span>
             </h1>
             <div className="text-xl mb-8 max-w-3xl mx-auto text-secondary font-ibm">
-              <span className="text-primary font-bold">The best consulting for: </span>
-              <ReactTyped strings={["Architect your DevOps Platform", "Engineer your AI Digital Product"]} typeSpeed={50} backSpeed={30} backDelay={2000} loop showCursor={true} cursorChar="|" className="text-secondary font-bold font-fira" />
+              <span className="text-primary font-bold">{t.heroTitle} </span>
+              <h6 className="text-sm text-muted-foreground mb-2 italic">{t.humbleOpinion}</h6>
+              <ReactTyped strings={language === 'pt' ? ["Arquitete sua Plataforma DevOps", "Engenharia de Produtos Digitais com IA"] : ["Architect your DevOps Platform", "Engineer your AI Digital Product"]} typeSpeed={50} backSpeed={30} backDelay={2000} loop showCursor={true} cursorChar="|" className="text-secondary font-bold font-fira" />
             </div>
             
 
@@ -53,7 +54,7 @@ const Index = () => {
               <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-secondary">
                 <CardContent className="p-8 text-left">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="bg-black w-16 h-16 rounded-lg flex items-center justify-center">
+                    <div className="bg-black/30 w-16 h-16 rounded-lg flex items-center justify-center">
                       <Code className="text-pink-500" size={32} />
                     </div>
                     <h3 className="font-semibold text-pink-500 text-2xl text-shadow-blue">{t.digitalProductsTitle}</h3>
@@ -111,7 +112,7 @@ const Index = () => {
               <Card className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-secondary">
                 <CardContent className="p-8 text-left">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="bg-black w-16 h-16 rounded-lg flex items-center justify-center">
+                    <div className="bg-black/30 w-16 h-16 rounded-lg flex items-center justify-center">
                       <Cloud className="text-pink-500" size={32} />
                     </div>
                     <h3 className="text-2xl font-semibold text-pink-500 text-shadow-blue">{t.devopsTitle}</h3>
