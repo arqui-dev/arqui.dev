@@ -50,79 +50,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-secondary text-shadow-pink">{t.aboutTitle}</h2>
-              <p className="text-lg mb-8 text-secondary">
-                {t.aboutDescription}
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 p-2 rounded-lg">
-                    <Users className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2 text-secondary text-shadow-pink">{t.digitalProductsAI}</h3>
-                    <p className="text-secondary">
-                      {t.digitalProductsAIDesc}
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 p-2 rounded-lg">
-                    <Zap className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2 text-secondary text-shadow-pink">{t.managedDevops}</h3>
-                    <p className="text-secondary">
-                      {t.managedDevopsDesc}
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 p-2 rounded-lg">
-                    <CheckCircle className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-2 text-secondary text-shadow-pink">{t.completeCycle}</h3>
-                    <p className="text-secondary">
-                      {t.completeCycleDesc}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8">
-              <div className="grid grid-cols-2 gap-8 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                  <div className="text-muted-foreground">{t.projectsDelivered}</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">99%</div>
-                  <div className="text-muted-foreground">{t.uptimeGuaranteed}</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-                  <div className="text-muted-foreground">{t.support}</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">5+</div>
-                  <div className="text-muted-foreground">{t.yearsExperience}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-primary/90">
         <div className="container mx-auto px-6 text-center">
@@ -250,6 +177,79 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-secondary text-shadow-pink">{t.aboutTitle}</h2>
+              <p className="text-lg mb-8 text-secondary">
+                {t.aboutDescription}
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary/10 p-2 rounded-lg">
+                    <Users className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2 text-secondary text-shadow-pink">{t.digitalProductsAI}</h3>
+                    <p className="text-secondary">
+                      {t.digitalProductsAIDesc}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary/10 p-2 rounded-lg">
+                    <Zap className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2 text-secondary text-shadow-pink">{t.managedDevops}</h3>
+                    <p className="text-secondary">
+                      {t.managedDevopsDesc}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary/10 p-2 rounded-lg">
+                    <CheckCircle className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2 text-secondary text-shadow-pink">{t.completeCycle}</h3>
+                    <p className="text-secondary">
+                      {t.completeCycleDesc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8">
+              <div className="grid grid-cols-2 gap-8 text-center">
+                <div>
+                  <div className="text-3xl font-bold text-primary mb-2">50+</div>
+                  <div className="text-muted-foreground">{t.projectsDelivered}</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary mb-2">99%</div>
+                  <div className="text-muted-foreground">{t.uptimeGuaranteed}</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary mb-2">24/7</div>
+                  <div className="text-muted-foreground">{t.support}</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary mb-2">5+</div>
+                  <div className="text-muted-foreground">{t.yearsExperience}</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
