@@ -49,6 +49,7 @@ export const translations = {
     services: 'Serviços',
     about: 'Sobre',
     contact: 'Contato',
+    blog: 'Blog',
     talkToUs: 'Fale Conosco',
     
     // Hero
@@ -115,6 +116,12 @@ export const translations = {
     ctaDescription: 'Vamos conversar sobre como podemos acelerar seus projetos e otimizar sua operação',
     scheduleFreeConsultation: 'Agendar Consulta Gratuita',
     
+    // Blog
+    latestPosts: 'Últimas Postagens',
+    latestPostsDescription: 'Insights sobre DevOps, IA e arquitetura de produtos digitais',
+    readMore: 'Leia mais',
+    seeAllPosts: 'Ver todas as postagens',
+    
     // Footer
     footerDescription: 'Consultoria especializada em DevOps e Arquitetura de Produtos Digitais',
     digitalProducts: 'Produtos Digitais',
@@ -126,6 +133,7 @@ export const translations = {
     services: 'Services',
     about: 'About',
     contact: 'Contact',
+    blog: 'Blog',
     talkToUs: 'Contact Us',
     
     // Hero
@@ -191,6 +199,12 @@ export const translations = {
     ctaTitle: 'Ready to transform your business?',
     ctaDescription: "Let's talk about how we can accelerate your projects and optimize your operation",
     scheduleFreeConsultation: 'Schedule Free Consultation',
+    
+    // Blog
+    latestPosts: 'Latest Posts',
+    latestPostsDescription: 'Insights on DevOps, AI and digital product architecture',
+    readMore: 'Read more',
+    seeAllPosts: 'See all posts',
     
     // Footer
     footerDescription: 'Consulting specialized in DevOps and Digital Product Architecture',

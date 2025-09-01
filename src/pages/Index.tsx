@@ -1,16 +1,81 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Code, Cloud, Zap, Users, CheckCircle, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Code, Cloud, Zap, Users, CheckCircle, Mail, MapPin, Phone, Calendar, Clock } from "lucide-react";
 import { useLanguage, translations } from "@/hooks/useLanguage";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { ReactTyped } from "react-typed";
+import { Link } from "react-router-dom";
 import techBg from "@/assets/tech-terminal-bg.jpg";
+
+// Mock blog posts for the latest posts section
+const mockPosts = {
+  pt: [
+    {
+      id: 1,
+      title: "Como Implementar DevOps Eficaz em Startups",
+      excerpt: "Descubra as melhores práticas para implementar uma cultura DevOps em empresas em crescimento acelerado.",
+      author: "João Silva",
+      date: "2024-01-15",
+      readTime: "5 min",
+      category: "DevOps"
+    },
+    {
+      id: 2,
+      title: "IA Generativa em Produtos Digitais: Oportunidades e Desafios",
+      excerpt: "Explore como a inteligência artificial generativa está revolucionando o desenvolvimento de produtos digitais.",
+      author: "Maria Santos",
+      date: "2024-01-10",
+      readTime: "7 min",
+      category: "IA"
+    },
+    {
+      id: 3,
+      title: "Kubernetes vs Docker Swarm: Qual Escolher em 2024?",
+      excerpt: "Uma comparação detalhada entre as principais plataformas de orquestração de containers.",
+      author: "Carlos Oliveira",
+      date: "2024-01-05",
+      readTime: "6 min",
+      category: "Containers"
+    }
+  ],
+  en: [
+    {
+      id: 1,
+      title: "How to Implement Effective DevOps in Startups",
+      excerpt: "Discover best practices for implementing DevOps culture in fast-growing companies.",
+      author: "John Smith",
+      date: "2024-01-15",
+      readTime: "5 min",
+      category: "DevOps"
+    },
+    {
+      id: 2,
+      title: "Generative AI in Digital Products: Opportunities and Challenges",
+      excerpt: "Explore how generative artificial intelligence is revolutionizing digital product development.",
+      author: "Maria Santos",
+      date: "2024-01-10",
+      readTime: "7 min",
+      category: "AI"
+    },
+    {
+      id: 3,
+      title: "Kubernetes vs Docker Swarm: Which to Choose in 2024?",
+      excerpt: "A detailed comparison between the main container orchestration platforms.",
+      author: "Carlos Oliveira",
+      date: "2024-01-05",
+      readTime: "6 min",
+      category: "Containers"
+    }
+  ]
+};
 const Index = () => {
   const {
     language
   } = useLanguage();
   const t = translations[language];
+  const posts = mockPosts[language];
+  
   return <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="bg-transparent">
@@ -250,6 +315,65 @@ const Index = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Blog Posts Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-secondary text-shadow-pink">
+              {t.latestPosts}
+            </h2>
+            <p className="text-xl text-secondary max-w-2xl mx-auto">
+              {t.latestPostsDescription}
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {posts.map((post) => (
+              <Card key={post.id} className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <Badge variant="secondary" className="bg-primary/10 text-primary">
+                      {post.category}
+                    </Badge>
+                    <div className="flex items-center space-x-2 text-muted-foreground text-sm">
+                      <Calendar size={14} />
+                      <span>{new Date(post.date).toLocaleDateString(language === 'pt' ? 'pt-BR' : 'en-US')}</span>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-secondary hover:text-primary transition-colors cursor-pointer mb-3">
+                    {post.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2 text-muted-foreground text-xs">
+                      <Clock size={12} />
+                      <span>{post.readTime}</span>
+                    </div>
+                    <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80">
+                      {t.readMore}
+                    </Button>
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-2">
+                    Por {post.author}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link to="/blog">
+              <Button variant="outline" className="hover:bg-primary/10">
+                {t.seeAllPosts}
+                <ArrowRight size={16} className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
