@@ -44,9 +44,9 @@ All colors MUST be HSL. Sharp edges, high contrast, bold typography.
     /* BRUTALIST RADIUS - Sharp, minimal */
     --radius: 2px;
 
-    /* NEO BRUTALIST GRADIENTS - Pink to Black */
-    --gradient-primary: linear-gradient(45deg, hsl(320 100% 50%) 0%, hsl(320 100% 50%) 40%, hsl(0 0% 4%) 100%);
-    --gradient-hero: linear-gradient(45deg, hsl(320 100% 50%) 0%, hsl(0 0% 4%) 100%);
+    /* NEO BRUTALIST GRADIENTS - More Black, Less Pink */
+    --gradient-primary: linear-gradient(45deg, hsl(320 100% 30%) 0%, hsl(0 0% 4%) 30%, hsl(0 0% 4%) 100%);
+    --gradient-hero: linear-gradient(45deg, hsl(320 100% 30%) 0%, hsl(0 0% 4%) 50%);
     --gradient-section: linear-gradient(135deg, hsl(0 0% 8%), hsl(320 80% 40%));
     
     /* BRUTALIST SHADOWS - Sharp, stark */
@@ -93,9 +93,9 @@ All colors MUST be HSL. Sharp edges, high contrast, bold typography.
     --input: 0 0% 15%;
     --ring: 200 100% 50%;
 
-    /* NEO BRUTALIST GRADIENTS - Pink to Black */
-    --gradient-primary: linear-gradient(45deg, hsl(320 100% 50%) 0%, hsl(320 100% 50%) 40%, hsl(0 0% 4%) 100%);
-    --gradient-hero: linear-gradient(45deg, hsl(320 100% 50%) 0%, hsl(0 0% 4%) 100%);
+    /* NEO BRUTALIST GRADIENTS - More Black, Less Pink */
+    --gradient-primary: linear-gradient(45deg, hsl(320 100% 30%) 0%, hsl(0 0% 4%) 30%, hsl(0 0% 4%) 100%);
+    --gradient-hero: linear-gradient(45deg, hsl(320 100% 30%) 0%, hsl(0 0% 4%) 50%);
     --gradient-section: linear-gradient(135deg, hsl(0 0% 8%), hsl(320 80% 40%));
     
     /* DARK MODE BRUTALIST SHADOWS */
