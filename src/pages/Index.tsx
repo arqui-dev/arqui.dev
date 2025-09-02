@@ -6,7 +6,7 @@ import { useLanguage, translations } from "@/hooks/useLanguage";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { ReactTyped } from "react-typed";
 import { Link } from "react-router-dom";
-import techBg from "@/assets/tech-terminal-bg.jpg";
+import terminalBg from "@/assets/terminal-bg.jpg";
 
 // Mock blog posts for the latest posts section
 const mockPosts = {
@@ -76,7 +76,16 @@ const Index = () => {
   const t = translations[language];
   const posts = mockPosts[language];
   
-  return <div className="min-h-screen bg-background">
+    return <div className="min-h-screen bg-background relative" style={{
+      backgroundImage: `url(${terminalBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed'
+    }}>
+      {/* Gradient overlay with 55% opacity */}
+      <div className="fixed inset-0 bg-[image:var(--gradient-primary)] opacity-55 z-0"></div>
+      <div className="relative z-10">
       {/* Header */}
       <header className="bg-transparent">
         <div className="container mx-auto px-6 py-4">
@@ -87,14 +96,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden" style={{
-      backgroundImage: `url(${techBg})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
-    }}>
-        {/* 80% black overlay */}
-        <div className="absolute inset-0 bg-black/80"></div>
+      <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-left">
             <h1 className="text-6xl lg:text-8xl font-bold mb-6 font-fira">
@@ -436,6 +438,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      </div>
     </div>;
 };
 export default Index;
