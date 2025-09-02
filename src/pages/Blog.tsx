@@ -197,7 +197,7 @@ const Blog = () => {
       backgroundAttachment: 'fixed'
     }}>
       {/* Gradient overlay with 55% opacity */}
-      <div className="fixed inset-0 bg-[image:var(--gradient-primary)] opacity-55 z-0"></div>
+      <div className="fixed inset-0 bg-[image:var(--gradient-primary)] opacity-85 z-0"></div>
       <div className="relative z-10">
       {/* Header */}
       <header className="bg-transparent border-b border-border">
