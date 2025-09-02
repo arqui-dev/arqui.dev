@@ -233,12 +233,12 @@ const Blog = () => {
                       <span>{new Date(post.date).toLocaleDateString(language === 'pt' ? 'pt-BR' : 'en-US')}</span>
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-secondary hover:text-primary transition-colors cursor-pointer">
-                    {post.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {post.excerpt}
-                  </p>
+                   <h3 className="text-xl font-semibold text-secondary text-shadow-pink hover:text-primary transition-colors cursor-pointer">
+                     {post.title}
+                   </h3>
+                   <p className="text-accent text-shadow-blue">
+                     {post.excerpt}
+                   </p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex flex-wrap gap-2">
@@ -257,9 +257,9 @@ const Blog = () => {
                       {t.readMore}
                     </Button>
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    Por {post.author}
-                  </div>
+                   <div className="text-sm text-secondary text-shadow-yellow">
+                     Por {post.author}
+                   </div>
                 </CardContent>
               </Card>
             ))}
