@@ -188,7 +188,7 @@ const Blog = () => {
   const posts = blogPosts[language];
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-primary to-primary/90">
+    <div className="min-h-screen bg-[image:var(--gradient-primary)]">
       {/* Header */}
       <header className="bg-transparent border-b border-border">
         <div className="container mx-auto px-6 py-4">
@@ -222,7 +222,7 @@ const Blog = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {posts.map((post) => (
-              <Card key={post.id} className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-card">
+              <Card key={post.id} className="bg-card">
                 <CardHeader className="space-y-4">
                   <div className="flex items-center justify-between">
                     <Badge variant="secondary" className="bg-primary/10 text-primary">
