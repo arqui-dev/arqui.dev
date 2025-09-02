@@ -188,19 +188,17 @@ const Blog = () => {
   const posts = blogPosts[language];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-r from-primary to-primary/90">
       {/* Header */}
       <header className="bg-transparent border-b border-border">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-4">
-              <Link to="/" className="flex items-center space-x-2 text-primary hover:text-primary/80">
-                <ArrowLeft size={20} />
-                <span className="text-sm">Voltar</span>
-              </Link>
-              <div className="text-xl font-bold">
-                <span className="text-primary text-shadow-blue">arqui</span><span className="text-secondary text-shadow-pink">.dev</span>
-              </div>
+            <Link to="/" className="bg-[#fff066] border border-accent-foreground text-black hover:bg-[#fff066]/90 transition-colors rounded-md px-3 py-1.5 text-sm flex items-center space-x-2">
+              <ArrowLeft size={16} />
+              <span>Voltar</span>
+            </Link>
+            <div className="text-xl font-bold absolute left-1/2 transform -translate-x-1/2">
+              <span className="text-primary text-shadow-blue">arqui</span><span className="text-secondary text-shadow-pink">.dev</span>
             </div>
             <LanguageToggle />
           </div>
@@ -208,9 +206,9 @@ const Blog = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/10">
+      <section className="py-16">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-secondary">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-secondary text-shadow-pink">
             {t.blog}
           </h1>
           <p className="text-xl text-secondary max-w-2xl mx-auto">
