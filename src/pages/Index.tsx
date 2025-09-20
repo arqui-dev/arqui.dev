@@ -6,8 +6,6 @@ import { useLanguage, translations } from "@/hooks/useLanguage";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { ReactTyped } from "react-typed";
 import { Link } from "react-router-dom";
-import terminalBg from "@/assets/terminal-bg.jpg";
-
 // Mock blog posts for the latest posts section
 const mockPosts = {
   pt: [
@@ -76,14 +74,8 @@ const Index = () => {
   const t = translations[language];
   const posts = mockPosts[language];
   
-    return <div className="min-h-screen bg-background relative" style={{
-      backgroundImage: `url(${terminalBg})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed'
-    }}>
-      {/* Gradient overlay with 55% opacity */}
+    return <div className="min-h-screen bg-background relative">
+      {/* Gradient overlay */}
       <div className="fixed inset-0 bg-[image:var(--gradient-primary)] opacity-85 z-0"></div>
       <div className="relative z-10">
       {/* Header */}

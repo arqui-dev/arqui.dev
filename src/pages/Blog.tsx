@@ -5,8 +5,6 @@ import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { useLanguage, translations } from "@/hooks/useLanguage";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { Link } from "react-router-dom";
-import markdownBg from "@/assets/markdown-bg.jpg";
-
 // Mock blog posts data
 const blogPosts = {
   pt: [
@@ -189,14 +187,8 @@ const Blog = () => {
   const posts = blogPosts[language];
 
   return (
-    <div className="min-h-screen relative" style={{
-      backgroundImage: `url(${markdownBg})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed'
-    }}>
-      {/* Gradient overlay with 55% opacity */}
+    <div className="min-h-screen relative">
+      {/* Gradient overlay */}
       <div className="fixed inset-0 bg-[image:var(--gradient-primary)] opacity-85 z-0"></div>
       <div className="relative z-10">
       {/* Header */}
