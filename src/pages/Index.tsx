@@ -79,7 +79,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-left">
             <h1 className="text-6xl lg:text-8xl font-bold mb-6 font-fira">
@@ -92,14 +92,25 @@ const Index = () => {
               </span>
               <h6 className="text-accent font-mono mt-6 text-xs font-thin">{t.humbleOpinion}</h6>
             </div>
-            
-
           </div>
+        </div>
+        
+        {/* Saiba Mais Button */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <Button 
+            variant="ghost" 
+            size="lg"
+            onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            className="text-secondary hover:text-primary transition-colors"
+          >
+            <span className="mr-2">{language === 'pt' ? 'Saiba Mais' : 'Learn More'}</span>
+            <ArrowRight className="rotate-90" size={20} />
+          </Button>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary/90">
+      <section id="services" className="py-20 bg-gradient-to-r from-primary to-primary/90">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-secondary text-shadow-pink">
             {t.ctaTitle}
