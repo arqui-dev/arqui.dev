@@ -69,20 +69,20 @@ const Index = () => {
       {/* Gradient overlay */}
       <div className="fixed inset-0 bg-[image:var(--gradient-primary)] opacity-85 z-0"></div>
       <div className="relative z-10">
-      {/* Header */}
-      <header className="bg-transparent">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-end">
-            <LanguageToggle />
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden group">
+        {/* Header - appears on hover */}
+        <header className="absolute top-0 left-0 right-0 bg-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+          <div className="container mx-auto px-6 py-4">
+            <div className="flex justify-end">
+              <LanguageToggle />
+            </div>
+          </div>
+        </header>
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-left">
-            <h1 className="text-6xl lg:text-8xl font-bold mb-6 font-fira">
+            <h1 className="text-7xl lg:text-9xl xl:text-[10rem] font-bold mb-12 font-fira">
               <span className="text-primary text-shadow-blue">arqui</span><span className="text-secondary text-shadow-pink">.dev</span>
             </h1>
             <div className="text-xl mb-8 max-w-3xl text-secondary font-ibm">
@@ -90,7 +90,7 @@ const Index = () => {
               <span className="text-secondary font-bold font-fira">
                 {language === 'pt' ? "Arquitetura de Plataformas DevOps / Engenharia de Produtos Digitais com IA" : "DevOps Platform Architecture / AI Digital Product Engineering"}
               </span>
-              <h6 className="text-accent font-mono mt-6 text-xs font-thin">{t.humbleOpinion}</h6>
+              <h6 className="text-accent font-mono mt-8 text-xs font-thin">{t.humbleOpinion}</h6>
             </div>
           </div>
         </div>
