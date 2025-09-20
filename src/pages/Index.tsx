@@ -8,64 +8,56 @@ import { ReactTyped } from "react-typed";
 import { Link } from "react-router-dom";
 // Mock blog posts for the latest posts section
 const mockPosts = {
-  pt: [
-    {
-      id: 1,
-      title: "Como Implementar DevOps Eficaz em Startups",
-      excerpt: "Descubra as melhores práticas para implementar uma cultura DevOps em empresas em crescimento acelerado.",
-      author: "João Silva",
-      date: "2024-01-15",
-      readTime: "5 min",
-      category: "DevOps"
-    },
-    {
-      id: 2,
-      title: "IA Generativa em Produtos Digitais: Oportunidades e Desafios",
-      excerpt: "Explore como a inteligência artificial generativa está revolucionando o desenvolvimento de produtos digitais.",
-      author: "Maria Santos",
-      date: "2024-01-10",
-      readTime: "7 min",
-      category: "IA"
-    },
-    {
-      id: 3,
-      title: "Kubernetes vs Docker Swarm: Qual Escolher em 2024?",
-      excerpt: "Uma comparação detalhada entre as principais plataformas de orquestração de containers.",
-      author: "Carlos Oliveira",
-      date: "2024-01-05",
-      readTime: "6 min",
-      category: "Containers"
-    }
-  ],
-  en: [
-    {
-      id: 1,
-      title: "How to Implement Effective DevOps in Startups",
-      excerpt: "Discover best practices for implementing DevOps culture in fast-growing companies.",
-      author: "John Smith",
-      date: "2024-01-15",
-      readTime: "5 min",
-      category: "DevOps"
-    },
-    {
-      id: 2,
-      title: "Generative AI in Digital Products: Opportunities and Challenges",
-      excerpt: "Explore how generative artificial intelligence is revolutionizing digital product development.",
-      author: "Maria Santos",
-      date: "2024-01-10",
-      readTime: "7 min",
-      category: "AI"
-    },
-    {
-      id: 3,
-      title: "Kubernetes vs Docker Swarm: Which to Choose in 2024?",
-      excerpt: "A detailed comparison between the main container orchestration platforms.",
-      author: "Carlos Oliveira",
-      date: "2024-01-05",
-      readTime: "6 min",
-      category: "Containers"
-    }
-  ]
+  pt: [{
+    id: 1,
+    title: "Como Implementar DevOps Eficaz em Startups",
+    excerpt: "Descubra as melhores práticas para implementar uma cultura DevOps em empresas em crescimento acelerado.",
+    author: "João Silva",
+    date: "2024-01-15",
+    readTime: "5 min",
+    category: "DevOps"
+  }, {
+    id: 2,
+    title: "IA Generativa em Produtos Digitais: Oportunidades e Desafios",
+    excerpt: "Explore como a inteligência artificial generativa está revolucionando o desenvolvimento de produtos digitais.",
+    author: "Maria Santos",
+    date: "2024-01-10",
+    readTime: "7 min",
+    category: "IA"
+  }, {
+    id: 3,
+    title: "Kubernetes vs Docker Swarm: Qual Escolher em 2024?",
+    excerpt: "Uma comparação detalhada entre as principais plataformas de orquestração de containers.",
+    author: "Carlos Oliveira",
+    date: "2024-01-05",
+    readTime: "6 min",
+    category: "Containers"
+  }],
+  en: [{
+    id: 1,
+    title: "How to Implement Effective DevOps in Startups",
+    excerpt: "Discover best practices for implementing DevOps culture in fast-growing companies.",
+    author: "John Smith",
+    date: "2024-01-15",
+    readTime: "5 min",
+    category: "DevOps"
+  }, {
+    id: 2,
+    title: "Generative AI in Digital Products: Opportunities and Challenges",
+    excerpt: "Explore how generative artificial intelligence is revolutionizing digital product development.",
+    author: "Maria Santos",
+    date: "2024-01-10",
+    readTime: "7 min",
+    category: "AI"
+  }, {
+    id: 3,
+    title: "Kubernetes vs Docker Swarm: Which to Choose in 2024?",
+    excerpt: "A detailed comparison between the main container orchestration platforms.",
+    author: "Carlos Oliveira",
+    date: "2024-01-05",
+    readTime: "6 min",
+    category: "Containers"
+  }]
 };
 const Index = () => {
   const {
@@ -73,8 +65,7 @@ const Index = () => {
   } = useLanguage();
   const t = translations[language];
   const posts = mockPosts[language];
-  
-    return <div className="min-h-screen bg-background relative">
+  return <div className="min-h-screen bg-background relative">
       {/* Gradient overlay */}
       <div className="fixed inset-0 bg-[image:var(--gradient-primary)] opacity-85 z-0"></div>
       <div className="relative z-10">
@@ -99,7 +90,7 @@ const Index = () => {
               <span className="text-secondary font-bold font-fira">
                 {language === 'pt' ? "Arquitetura de Plataformas DevOps / Engenharia de Produtos Digitais com IA" : "DevOps Platform Architecture / AI Digital Product Engineering"}
               </span>
-              <h6 className="text-sm text-accent font-mono mt-6">{t.humbleOpinion}</h6>
+              <h6 className="text-accent font-mono mt-6 text-xs font-thin">{t.humbleOpinion}</h6>
             </div>
             
 
@@ -324,8 +315,7 @@ const Index = () => {
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {posts.map((post) => (
-              <Card key={post.id} className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-card">
+            {posts.map(post => <Card key={post.id} className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-card">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <Badge variant="secondary" className="bg-primary/10 text-primary">
@@ -355,8 +345,7 @@ const Index = () => {
                     Por {post.author}
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
           
           <div className="text-center mt-12">
