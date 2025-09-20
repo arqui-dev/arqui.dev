@@ -96,12 +96,10 @@ const Index = () => {
             </h1>
             <div className="text-xl mb-8 max-w-3xl text-secondary font-ibm">
               <span className="text-primary font-bold">{t.heroTitle} </span>
-              <div className="mb-6">
-                <ReactTyped strings={language === 'pt' ? ["Arquitete sua Plataforma DevOps", "Engenharia de Produtos Digitais com IA"] : ["Architect your DevOps Platform", "Engineer your AI Digital Product"]} typeSpeed={50} backSpeed={30} backDelay={2000} loop showCursor={true} cursorChar="|" className="text-secondary font-bold font-fira" />
-              </div>
-              <h6 className="text-sm text-accent font-mono" style={{
-              marginTop: '1.5rem'
-            }}>{t.humbleOpinion}</h6>
+              <span className="text-secondary font-bold font-fira">
+                {language === 'pt' ? "Arquitetura de Plataformas DevOps / Engenharia de Produtos Digitais com IA" : "DevOps Platform Architecture / AI Digital Product Engineering"}
+              </span>
+              <h6 className="text-sm text-accent font-mono mt-6">{t.humbleOpinion}</h6>
             </div>
             
 
