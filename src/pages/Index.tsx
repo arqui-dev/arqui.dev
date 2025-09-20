@@ -82,26 +82,26 @@ const Index = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-left">
-            <h1 className="text-7xl lg:text-9xl xl:text-[10rem] font-bold mb-12 font-fira">
+            <h1 className="text-7xl lg:text-9xl xl:text-[10rem] font-bold mb-18 font-fira">
               <span className="text-primary text-shadow-blue">arqui</span><span className="text-secondary text-shadow-pink">.dev</span>
             </h1>
-            <div className="text-xl mb-8 max-w-3xl text-secondary font-ibm">
+            <div className="text-xl mb-18 max-w-3xl text-secondary font-ibm">
               <span className="text-primary font-bold">{t.heroTitle} </span>
               <span className="text-secondary font-bold font-fira">
                 {language === 'pt' ? "Arquitetura de Plataformas DevOps / Engenharia de Produtos Digitais com IA" : "DevOps Platform Architecture / AI Digital Product Engineering"}
               </span>
-              <h6 className="text-accent font-mono mt-8 text-xs font-thin">{t.humbleOpinion}</h6>
+              <h6 className="text-accent font-mono mt-18 text-xs font-thin">{t.humbleOpinion}</h6>
             </div>
           </div>
         </div>
         
         {/* Saiba Mais Button */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 w-full flex justify-center">
           <Button 
             variant="ghost" 
             size="lg"
             onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-            className="text-secondary hover:text-primary transition-colors"
+            className="text-secondary hover:text-primary transition-colors animate-bounce"
           >
             <span className="mr-2">{language === 'pt' ? 'Saiba Mais' : 'Learn More'}</span>
             <ArrowRight className="rotate-90" size={20} />
