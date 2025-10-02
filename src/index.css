@@ -10,13 +10,13 @@ All colors MUST be HSL. Sharp edges, high contrast, bold typography.
   :root {
     /* BRUTALIST COLOR PALETTE - High contrast, sharp */
     --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
+    --foreground: 56 100% 70%;
 
     --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card-foreground: 56 100% 70%;
 
     --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover-foreground: 56 100% 70%;
 
     /* PRIMARY - Electric magenta, bold and vibrant */
     --primary: 320 100% 50%;
@@ -65,13 +65,13 @@ All colors MUST be HSL. Sharp edges, high contrast, bold typography.
 
   .dark {
     --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
+    --foreground: 56 100% 70%;
 
     --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card-foreground: 56 100% 70%;
 
     --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover-foreground: 56 100% 70%;
 
     --primary: 320 100% 50%;
     --primary-foreground: 0 0% 98%;
